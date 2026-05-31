@@ -380,3 +380,48 @@ def process_image(path: str) -> dict:
         }
     }
 
+def process_uploaded_image(img: np.ndarray) -> dict:
+    h, w = img.shape[:2]
+    img_area = h * w
+
+    processed = preprocess(img)
+    binary = binarize(processed)
+    mask = apply_morphology(binary)
+
+    blobs = extract_contours(mask, img_area)
+    body_count, ann = estimate_total(blobs, mask)
+
+    heads = detect_heads(img)
+    head_count = len(heads)
+
+    final_count = max(body_count, head_count)
+
+    result_img = annotate_image(img, ann, final_count)
+    result_img = draw_heads(result_img, heads)
+
+    cv2.putText(
+        result_img,
+        f"Corpos: {body_count} | Cabecas: {head_count}",
+        (12, 75),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.65,
+        (255, 0, 255),
+        2
+    )
+
+    return {
+        "image": "uploaded_image",
+        "count": final_count,
+        "body_count": body_count,
+        "head_count": head_count,
+        "blobs": len(ann),
+        "heads": len(heads),
+        "result_img": result_img,
+        "stages": {
+            "original": img,
+            "processed": processed,
+            "binary": binary,
+            "mask_clean": mask,
+            "result": result_img,
+        }
+    }
