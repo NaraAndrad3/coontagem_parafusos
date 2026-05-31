@@ -34,7 +34,6 @@ from src.detector import process_uploaded_image
 
 st.set_page_config(
     page_title="Contador de Parafusos",
-    page_icon="🔩",
     layout="wide"
 )
 
@@ -43,7 +42,7 @@ st.set_page_config(
 # CABEÇALHO
 # ------------------------------------------------------------
 
-st.title("🔩 Sistema Inteligente de Contagem de Parafusos")
+st.title(" >> Sistema Inteligente de Contagem de Parafusos")
 
 st.markdown(
     """
@@ -235,50 +234,47 @@ if uploaded_file is not None:
 
     st.divider()
 
-    # --------------------------------------------------------
-    # EXPLICAÇÃO
-    # --------------------------------------------------------
 
     with st.expander(
-        "🔍 Como o algoritmo chegou nesse resultado?"
+        " >> Como o algoritmo chegou nesse resultado?"
     ):
 
         st.markdown(
             """
-### Etapa 1 — Pré-processamento
-A imagem recebe suavização Gaussiana para reduzir ruídos.
+            ### Etapa 1: Pré-processamento
+            A imagem recebe suavização Gaussiana para reduzir ruídos.
 
-### Etapa 2 — Binarização
-Utiliza o método de Otsu para separar automaticamente
-objetos e fundo.
+            ### Etapa 2 : Binarização
+            Utiliza o método de Otsu para separar automaticamente
+            objetos e fundo.
 
-### Etapa 3 — Morfologia
-Remove ruídos e pequenas imperfeições da máscara.
+            ### Etapa 3 : Morfologia
+            Remove ruídos e pequenas imperfeições da máscara.
 
-### Etapa 4 — Extração de Contornos
-Identifica regiões candidatas a parafusos.
+            ### Etapa 4 : Extração de Contornos
+            Identifica regiões candidatas a parafusos.
 
-### Etapa 5 — Regras Geométricas
-São avaliadas características como:
+            ### Etapa 5 : Regras Geométricas
+            São avaliadas características como:
 
-- Área
-- Razão de aspecto
-- Solidity
-- Extent
+            - Área
+            - Razão de aspecto
+            - Solidity
+            - Extent
 
-### Etapa 6 — Watershed
-Quando vários parafusos aparecem agrupados,
-o algoritmo estima quantos objetos existem
-dentro do mesmo contorno.
+            ### Etapa 6 : Watershed
+            Quando vários parafusos aparecem agrupados,
+            o algoritmo estima quantos objetos existem
+            dentro do mesmo contorno.
 
-### Etapa 7 — Fusão de Evidências
-A contagem final considera:
+            ### Etapa 7 : Fusão de Evidências
+            A contagem final considera:
 
-- Corpos detectados
-- Cabeças detectadas
+            - Corpos detectados
+            - Cabeças detectadas
 
-Selecionando a estimativa mais confiável.
-"""
+            Selecionando a estimativa mais confiável.
+            """
         )
 
 else:
@@ -288,6 +284,6 @@ else:
     )
 
     st.image(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Bolt_and_nut.jpg/320px-Bolt_and_nut.jpg",
+        "https://www.daazrolamentos.com/paraf-allen-ccl-6x8",
         caption="Exemplo de imagem para teste"
     )

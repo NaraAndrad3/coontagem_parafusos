@@ -33,33 +33,5 @@
     "body_count": 10,
     "head_count": 0,
     "blobs": 3
-  },
-  {
-    "image": "img6.jpg",
-    "count": 9,
-    "body_count": 9,
-    "head_count": 4,
-    "blobs": 9
-  },
-  {
-    "image": "img7.jpg",
-    "count": 4,
-    "body_count": 4,
-    "head_count": 0,
-    "blobs": 3
-  },
-  {
-    "image": "img8.jpg",
-    "count": 4,
-    "body_count": 4,
-    "head_count": 0,
-    "blobs": 3
-  },
-  {
-    "image": "img9.jpg",
-    "count": 0,
-    "body_count": 0,
-    "head_count": 0,
-    "blobs": 0
   }
 ]
