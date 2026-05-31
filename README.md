@@ -199,6 +199,6 @@ Nele são detalhados:
 
 ---
 
-## 👩 Autora
+## Autora
 
-**Nara Raquel Dias Andrade**
+**NaraAndrad3**
