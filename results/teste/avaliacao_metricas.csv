@@ -1,0 +1,6 @@
+imagem,real,predito,erro_absoluto,erro_percentual,acerto_exato
+img1.jpg,8,8,0,0.0,True
+img2.jpg,1,1,0,0.0,True
+img3.jpg,4,4,0,0.0,True
+img4.jpg,2,2,0,0.0,True
+img5.jpg,10,10,0,0.0,True

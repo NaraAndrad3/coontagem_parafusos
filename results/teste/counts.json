@@ -1,0 +1,65 @@
+[
+  {
+    "image": "img1.jpg",
+    "count": 8,
+    "body_count": 8,
+    "head_count": 1,
+    "blobs": 8
+  },
+  {
+    "image": "img2.jpg",
+    "count": 1,
+    "body_count": 1,
+    "head_count": 0,
+    "blobs": 1
+  },
+  {
+    "image": "img3.jpg",
+    "count": 4,
+    "body_count": 4,
+    "head_count": 0,
+    "blobs": 4
+  },
+  {
+    "image": "img4.jpg",
+    "count": 2,
+    "body_count": 2,
+    "head_count": 1,
+    "blobs": 2
+  },
+  {
+    "image": "img5.jpg",
+    "count": 10,
+    "body_count": 10,
+    "head_count": 0,
+    "blobs": 3
+  },
+  {
+    "image": "img6.jpg",
+    "count": 9,
+    "body_count": 9,
+    "head_count": 4,
+    "blobs": 9
+  },
+  {
+    "image": "img7.jpg",
+    "count": 4,
+    "body_count": 4,
+    "head_count": 0,
+    "blobs": 3
+  },
+  {
+    "image": "img8.jpg",
+    "count": 4,
+    "body_count": 4,
+    "head_count": 0,
+    "blobs": 3
+  },
+  {
+    "image": "img9.jpg",
+    "count": 0,
+    "body_count": 0,
+    "head_count": 0,
+    "blobs": 0
+  }
+]
